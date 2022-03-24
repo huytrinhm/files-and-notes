@@ -1,0 +1,19 @@
+.heading,
+thead th {
+    user-select: none;
+}
+
+time {
+    border-bottom: 1px dotted #222;
+    text-decoration: none;
+}
+
+.notes-id-col,
+.files-name-col {
+    width: 30%;
+}
+
+.notes-time-col,
+.files-size-col {
+    width: 20%;
+}
