@@ -9,11 +9,51 @@ time {
 }
 
 .notes-id-col,
-.files-name-col {
+.files-time-col {
     width: 30%;
 }
 
 .notes-time-col,
 .files-size-col {
     width: 20%;
+}
+
+.notes-button-col,
+.files-button-col {
+    width: 10%;
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.btn-add-note,
+.btn-delete-note,
+.btn-upload-file,
+.btn-delete-file {
+    min-width: 100%;
+    width: 100%;
+}
+
+thead th {
+    vertical-align: middle;
+}
+
+.file-name {
+    color: unset;
+    text-decoration: none;
+    border-bottom: 2px solid #5050f0;
+    cursor: pointer;
+    user-select: none;
+}
+
+.file-name:hover {
+    background-color: #5555f050;
+    color: unset;
+}
+
+.file-name:active {
+    background-color: #2020d050;
+    color: unset;
 }

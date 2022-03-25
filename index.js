@@ -5,14 +5,17 @@ const httpServer = require("http").createServer(app);
 const admin = require('firebase-admin');
 const firebaseAccount = require("./firebaseAccount.json");
 admin.initializeApp({
-    credential: admin.credential.cert(firebaseAccount)
+    credential: admin.credential.cert(firebaseAccount),
+    storageBucket: "files-and-notes.appspot.com"
 });
 
 const notes = require("./api/notes");
+const files = require("./api/files");
 
 app.use(express.static("public"));
 
 app.use("/api/notes", notes);
+app.use("/api/files", files);
 
 app.use((req, res) => {
     res.status(404);

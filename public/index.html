@@ -17,10 +17,8 @@
     <h1 class="text-center my-2 heading"><strong>Files and Notes</strong></h1>
     <nav>
         <div class="nav nav-tabs" id="nav-tab" role="tablist">
-            <button class="nav-link active" id="nav-notes-tab" data-bs-toggle="tab" data-bs-target="#nav-notes"
-                type="button" role="tab" aria-controls="nav-notes" aria-selected="true">Notes</button>
-            <button class="nav-link" id="nav-files-tab" data-bs-toggle="tab" data-bs-target="#nav-files" type="button"
-                role="tab" aria-controls="nav-files" aria-selected="false">Files</button>
+            <button class="nav-link active" id="nav-notes-tab" data-bs-toggle="tab" data-bs-target="#nav-notes" type="button" role="tab" aria-controls="nav-notes" aria-selected="true">Notes</button>
+            <button class="nav-link" id="nav-files-tab" data-bs-toggle="tab" data-bs-target="#nav-files" type="button" role="tab" aria-controls="nav-files" aria-selected="false">Files</button>
         </div>
     </nav>
     <div class="tab-content" id="nav-tabContent">
@@ -31,6 +29,7 @@
                         <th class="notes-id-col" scope="col">Id</th>
                         <th class="notes-value-col" scope="col">Value</th>
                         <th class="notes-time-col" scope="col">Time</th>
+                        <th class="notes-button-col"><button type="button" class="btn btn-primary btn-add-note" data-bs-toggle="modal" data-bs-target="#add-note-modal">Add</button></th>
                     </tr>
                 </thead>
                 <tbody class="table-body" id="notes-table"></tbody>
@@ -43,10 +42,62 @@
                         <th class="files-name-col" scope="col">Name</th>
                         <th class="files-time-col" scope="col">Time</th>
                         <th class="files-size-col" scope="col">Size</th>
+                        <th class="files-button-col"><button type="button" class="btn btn-primary btn-upload-file" data-bs-toggle="modal" data-bs-target="#upload-file-modal">Upload</button></th>
                     </tr>
                 </thead>
                 <tbody class="table-body" id="files-table"></tbody>
             </table>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="add-note-modal" tabindex="-1" aria-labelledby="add-note-modal-label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="add-note-modal-label">Add note</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="add-note-id" class="form-label">Id</label>
+                        <input type="text" class="form-control" id="add-note-id">
+                    </div>
+                    <div class="mb-3">
+                        <label for="add-note-value" class="form-label">Value</label>
+                        <input type="text" class="form-control" id="add-note-value">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success btn-save-note" data-bs-dismiss="modal">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="upload-file-modal" tabindex="-1" aria-labelledby="upload-file-modal-label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="upload-file-modal-label">Upload file</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="add-note-id" class="form-label">Id</label>
+                        <input type="text" class="form-control" id="upload-file-id">
+                    </div>
+                    <div class="mb-3">
+                        <label for="add-note-value" class="form-label">File</label>
+                        <input type="file" class="form-control" id="upload-file-value">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success btn-save-file" data-bs-dismiss="modal">Save</button>
+                </div>
+            </div>
         </div>
     </div>
 
