@@ -1,5 +1,5 @@
 ---
 applications:
 - name: files-and-notes
-  memory: 64M
+  memory: 128M
   instances: 1
