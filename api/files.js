@@ -3,7 +3,7 @@ const admin = require("firebase-admin");
 const storage = admin.storage();
 const router = express.Router();
 const multer = require("multer");
-const upload = multer({ dest: 'uploads/' });
+const upload = multer({ dest: 'uploads/', limits: { fieldSize: 2 * 1024 * 1024 } });
 const fs = require("fs");
 
 const filesBucket = storage.bucket();
