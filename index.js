@@ -3,7 +3,7 @@ const app = express();
 const httpServer = require("http").createServer(app);
 
 const admin = require('firebase-admin');
-const firebaseAccount = require("./firebaseAccount.json");
+const firebaseAccount = JSON.parse(process.env.FIREBASE_CREDS);
 admin.initializeApp({
     credential: admin.credential.cert(firebaseAccount),
     storageBucket: "files-and-notes.appspot.com"
