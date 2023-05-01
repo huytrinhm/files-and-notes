@@ -15,10 +15,13 @@
 
 <body class="px-3">
     <h1 class="text-center my-2 heading"><strong>Files and Notes</strong></h1>
+    <button class="btn btn-sm btn-danger" style="float:right;" onclick="document.cookie = 'accesskey='; document.location.href='/login'">Log Out</button>
     <nav>
         <div class="nav nav-tabs" id="nav-tab" role="tablist">
-            <button class="nav-link active" id="nav-notes-tab" data-bs-toggle="tab" data-bs-target="#nav-notes" type="button" role="tab" aria-controls="nav-notes" aria-selected="true">Notes</button>
-            <button class="nav-link" id="nav-files-tab" data-bs-toggle="tab" data-bs-target="#nav-files" type="button" role="tab" aria-controls="nav-files" aria-selected="false">Files</button>
+            <button class="nav-link active" id="nav-notes-tab" data-bs-toggle="tab" data-bs-target="#nav-notes"
+                type="button" role="tab" aria-controls="nav-notes" aria-selected="true">Notes</button>
+            <button class="nav-link" id="nav-files-tab" data-bs-toggle="tab" data-bs-target="#nav-files" type="button"
+                role="tab" aria-controls="nav-files" aria-selected="false">Files</button>
         </div>
     </nav>
     <div class="tab-content" id="nav-tabContent">
@@ -29,7 +32,8 @@
                         <th class="notes-id-col" scope="col">Id</th>
                         <th class="notes-value-col" scope="col">Value</th>
                         <th class="notes-time-col" scope="col">Time</th>
-                        <th class="notes-button-col"><button type="button" class="btn btn-primary btn-add-note" data-bs-toggle="modal" data-bs-target="#add-note-modal">Add</button></th>
+                        <th class="notes-button-col"><button type="button" class="btn btn-primary btn-add-note"
+                                data-bs-toggle="modal" data-bs-target="#add-note-modal">Add</button></th>
                     </tr>
                 </thead>
                 <tbody class="table-body" id="notes-table"></tbody>
@@ -42,7 +46,8 @@
                         <th class="files-name-col" scope="col">Name</th>
                         <th class="files-time-col" scope="col">Time</th>
                         <th class="files-size-col" scope="col">Size</th>
-                        <th class="files-button-col"><button type="button" class="btn btn-primary btn-upload-file" data-bs-toggle="modal" data-bs-target="#upload-file-modal">Upload</button></th>
+                        <th class="files-button-col"><button type="button" class="btn btn-primary btn-upload-file"
+                                data-bs-toggle="modal" data-bs-target="#upload-file-modal">Upload</button></th>
                     </tr>
                 </thead>
                 <tbody class="table-body" id="files-table"></tbody>
@@ -76,7 +81,8 @@
         </div>
     </div>
 
-    <div class="modal fade" id="upload-file-modal" tabindex="-1" aria-labelledby="upload-file-modal-label" aria-hidden="true">
+    <div class="modal fade" id="upload-file-modal" tabindex="-1" aria-labelledby="upload-file-modal-label"
+        aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
@@ -101,9 +107,14 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+        integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="/js/index.js"></script>
 </body>
 

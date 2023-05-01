@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <title>Login</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 8px;
+        display: flex;
+      }
+
+      form {
+        margin: auto;
+        display: grid;
+        gap: 10px;
+      }
+
+      input {
+        height: 50px;
+        text-align: center;
+        width: min(80vw, 420px);
+        font-size: 1.5em;
+        border-radius: 5px;
+      }
+
+      input[type="submit"] {
+        background: #5050f0;
+        color: white;
+        border: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form method="post" autocomplete="off">
+      <input name="accesskey" type="password" placeholder="Access Key" spellcheck="false"/>
+      <input type="submit" value="Submit"/>
+    </form>
+    <script>
+      const form = document.querySelector("form");
+      const accesskey = document.querySelector("input[name=\"accesskey\"]")
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        var expiration_date = new Date();
+        var cookie_string = '';
+        expiration_date.setFullYear(expiration_date.getFullYear() + 1);
+        cookie_string = `accesskey=${accesskey.value}; path=/; expires=${expiration_date.toUTCString()}`;
+        document.cookie = cookie_string;
+        form.submit();
+      });
+    </script>
+  </body>
+</html>
